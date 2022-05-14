@@ -58,7 +58,9 @@ void fill(int** array, size_t str, size_t stol) {
 }
 
 void out(int** array, size_t str, size_t stol) {
-	for (size_t i = 0; i < str; ++i)
+	for (size_t i = 0; i < str; ++i) {
 		for (size_t j = 0; j < stol; ++j)
-			cout << array[i][j] << " " << endl;
+			cout << array[i][j] << " ";
+		cout << endl;
+	}
 }

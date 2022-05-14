@@ -14,13 +14,40 @@ int main() {
 	switch (ex) {
 
 	case 1: {
-		string 
+		int a;
+		string ch = "yes";
+		while (ch == "yes") {
+			cout << "Введите размер массива: \n";
+			cin >> a;
+			show(a);
+			cout << "Продолжить создавать массивы? (yes или no) \n";
+			cin >> ch;
+		}
+		break;
 	}
+	case 2: {
+		int a = 12;
+		show2(a);
+		break;
+	}
+	case 3: {
+		size_t str, stol;
+		cout << "Введите количество строк, затем столбцов: \n";
+		cin >> str;
+		cin >> stol;
+		int** arr = new int* [str];
+		for (size_t i = 0; i < str; ++i) 
+			arr[i] = new int[stol];
+		
 
-		  cout << "1а 2б 3в 4г 5д 6е 7ё 8ж 9з 10и 11й 12к 13л 14м 15н 16о 17п 18р 19с 20т 21у 22ф 23х 24ц 25ч 26ш 27щ 28ы 29ъ 30ь 31э 32ю 33я";
-
-
-
-
+		fill(arr, str, stol);
+		out(arr, str, stol);
+		
+		for (size_t i = 0; i < str; ++i) 
+				delete[] arr[i];
+				delete[] arr;
+		
+				break;
+	}
 	}
 }
